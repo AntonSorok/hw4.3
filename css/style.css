@@ -1,0 +1,419 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #004980;
+}
+
+.main {
+    display: box;
+    display: flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.main_panel {
+    width: 480px;
+    height: 460px;
+    display: box;
+    display: flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: space-evenly;
+    -ms-flex-pack: space-evenly;
+    justify-content: space-evenly;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border-radius: 12px;
+    background: #c2f5ff;
+}
+
+.main_label {
+    width: 208px;
+    height: 96px;
+    font-size: 40px;
+    line-height: 48px;
+    font-weight: 400;
+    text-align: center;
+    font-family: stratosskyeng-medium;
+    color: #004980;
+}
+
+.main_choose_dif {
+    width: 344px;
+    display: box;
+    display: flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.level {
+    width: 98px;
+    height: 98px;
+    border-radius: 12px;
+    border: 0;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-item-align: center;
+    grid-row-align: center;
+    align-self: center;
+    background-color: #fff;
+    color: #0080c1;
+    font-size: 64px;
+    line-height: 72px;
+}
+
+.level_pressed {
+    width: 95px;
+    height: 95px;
+    border-radius: 12px;
+    border: 1px solid black;
+}
+
+.level:active {
+    background: blueviolet;
+}
+
+.button {
+    width: 246px;
+    height: 50px;
+    background: #7ac100;
+    border-radius: 12px;
+    border: 0;
+    font-size: 24px;
+    line-height: 32px;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    color: #fff;
+    font-family: stratosskyeng-medium;
+    margin-bottom: 5px;
+}
+
+.header_part {
+    display: box;
+    display: flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+    margin-left: 23px;
+    margin-right: 23px;
+}
+
+.timer {
+    width: 155px;
+    height: 91px;
+    display: box;
+    display: flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+}
+
+.timer_minute {
+    display: box;
+    display: flexbox;
+    display: flex;
+    gap: 30px;
+    font-size: 16px;
+    line-height: 32px;
+    color: #fff;
+}
+
+.timer_seconds {
+    display: box;
+    display: flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    flex-direction: column;
+    font-size: 16px;
+    line-height: 32px;
+    color: #fff;
+}
+
+.timer_info {
+    font-size: 64px;
+    line-height: 72px;
+    color: #fff;
+}
+
+.game_panel {
+    margin-top: 35px;
+    margin-left: 23px;
+    margin-right: 23px;
+    min-width: 930px;
+    min-height: 550px;
+    /* display: grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    -ms-grid-rows: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    justify-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; */
+    perspective: 1000px;
+}
+
+.easy {
+    display: grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    -ms-grid-rows: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.medium {
+    display: grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    -ms-grid-rows: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    justify-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.hard {
+    display: grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    -ms-grid-rows: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    justify-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.card {
+    width: 95px;
+    height: 133px;
+    position: relative;
+    box-shadow: 1px 1px 1px rgb(0 0 0 / 30%);
+    transform: scale(1);
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+}
+
+.card.flip {
+    transform: rotateY(180deg);
+}
+
+.card:active {
+    transform: scale(0.97);
+    transition: transform 0.2s;
+}
+
+.card_closed {
+    background-image: url('/cards/рубашка.png');
+}
+
+.card_open_heart_A {
+    background-image: url('/cards/туз черви.png');
+}
+
+.card_open_heart_K {
+    background-image: url('/cards/король черви.png');
+}
+
+.card_open_heart_Q {
+    background-image: url('/cards/дама черви.png');
+}
+
+.card_open_heart_J {
+    background-image: url('/cards/валет черви.png');
+}
+
+.card_open_heart_10 {
+    background-image: url('/cards/10 черви.png');
+}
+
+.card_open_heart_9 {
+    background-image: url('/cards/9 черви.png');
+}
+
+.card_open_heart_8 {
+    background-image: url('/cards/8 черви.png');
+}
+
+.card_open_heart_7 {
+    background-image: url('/cards/7 черви.png');
+}
+
+.card_open_heart_6 {
+    background-image: url('/cards/6 черви.png');
+}
+
+.card_open_spades_A {
+    background-image: url('/cards/туз пики.png');
+}
+
+.card_open_spades_K {
+    background-image: url('/cards/король пики.png');
+}
+
+.card_open_spades_Q {
+    background-image: url('/cards/дама пики.png');
+}
+
+.card_open_spades_J {
+    background-image: url('/cards/валет пики.png');
+}
+
+.card_open_spades_10 {
+    background-image: url('/cards/10 пики.png');
+}
+
+.card_open_spades_9 {
+    background-image: url('/cards/9 пики.png');
+}
+
+.card_open_spades_8 {
+    background-image: url('/cards/8 пики.png');
+}
+
+.card_open_spades_7 {
+    background-image: url('/cards/7 пики.png');
+}
+
+.card_open_spades_6 {
+    background-image: url('/cards/6 пики.png');
+}
+
+.card_open_diamonds_A {
+    background-image: url('/cards/туз бубны.png');
+}
+
+.card_open_diamonds_K {
+    background-image: url('/cards/король бубны.png');
+}
+
+.card_open_diamonds_Q {
+    background-image: url('/cards/дама бубны.png');
+}
+
+.card_open_diamonds_J {
+    background-image: url('/cards/валет бубны.png');
+}
+
+.card_open_diamonds_10 {
+    background-image: url('/cards/10 бубны.png');
+}
+
+.card_open_diamonds_9 {
+    background-image: url('/cards/9 бубны.png');
+}
+
+.card_open_diamonds_8 {
+    background-image: url('/cards/8 бубны.png');
+}
+
+.card_open_diamonds_7 {
+    background-image: url('/cards/7 бубны.png');
+}
+
+.card_open_diamonds_6 {
+    background-image: url('/cards/6 бубны.png');
+}
+
+.card_open_clubs_A {
+    background-image: url('/cards/туз крести.png');
+}
+
+.card_open_clubs_K {
+    background-image: url('/cards/король крести.png');
+}
+
+.card_open_clubs_Q {
+    background-image: url('/cards/дама крести.png');
+}
+
+.card_open_clubs_J {
+    background-image: url('/cards/валет крести.png');
+}
+
+.card_open_clubs_10 {
+    background-image: url('/cards/10 крести.png');
+}
+
+.card_open_clubs_9 {
+    background-image: url('/cards/9 крести.png');
+}
+
+.card_open_clubs_8 {
+    background-image: url('/cards/8 крести.png');
+}
+
+.card_open_clubs_7 {
+    background-image: url('/cards/7 крести.png');
+}
+
+.card_open_clubs_6 {
+    background-image: url('/cards/6 крести.png');
+}
+
+.front_face {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 5px;
+}
+
+.back_face {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 5px;
+    backface-visibility: hidden;
+}
+
+@font-face {
+    font-family: stratosskyeng-medium;
+    src: url('../homework1/statosskyeng-v1.001/Desktop fonts/stratosskyeng-medium.otf')
+        format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
