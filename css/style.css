@@ -112,6 +112,9 @@ body {
     margin-bottom: 5px;
 }
 
+.main_game {
+    position: absolute;
+}
 .header_part {
     display: box;
     display: flexbox;
@@ -145,7 +148,7 @@ body {
     display: box;
     display: flexbox;
     display: flex;
-    gap: 30px;
+    gap: 60px;
     font-size: 16px;
     line-height: 32px;
     color: #fff;
@@ -164,6 +167,12 @@ body {
     color: #fff;
 }
 
+.timer_space {
+    display: flex;
+    flex-direction: row;
+    gap: 10px
+
+}
 .timer_info {
     font-size: 64px;
     line-height: 72px;
@@ -228,6 +237,25 @@ body {
     align-items: center;
 }
 
+.correct {
+    width: 95px;
+    height: 133px;
+    position: relative;
+    box-shadow: 1px 1px 1px rgb(0 0 0 / 30%);
+    transform: scale(1);
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+    transform: rotateY(180deg);
+}
+.reverse {
+    width: 95px;
+    height: 133px;
+    position: relative;
+    box-shadow: 1px 1px 1px rgb(0 0 0 / 30%);
+    transform: scale(1);
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+}
 .card {
     width: 95px;
     height: 133px;
@@ -408,6 +436,66 @@ body {
     position: absolute;
     border-radius: 5px;
     backface-visibility: hidden;
+}
+
+.main_win {
+    opacity: 50%;
+}
+
+.result_screen {
+    position: relative;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.block_result_info {
+    width: 480px;
+    height: 460px;
+    background-color: #c2f5ff;
+    border-radius: 12px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.wow_picture {
+    width: 96px;
+    height: 96px;
+    background-image: url('/wow.png');
+    border: 0px;
+}
+
+.result {
+    font-family: 'stratosskyeng-medium';
+    font-style: normal;
+    line-height: 48px;
+    font-size: 40px;
+    font-weight: 400;
+    color: #004980;
+    margin-bottom: 20px;
+}
+
+.result_timer_info {
+    font-style: 24px;
+    font-weight: 400;
+    line-height: 32px;
+    font-style: normal;
+    color: black;
+    margin-bottom: 10px;
+}
+
+.result_timer {
+    font-family: 'StratosSkyeng';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 72px;
+    color: black;
+    margin-bottom: 40px;
 }
 
 @font-face {

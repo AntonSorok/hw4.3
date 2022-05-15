@@ -2,6 +2,8 @@ const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
+const { resolveObjectURL } = require('buffer')
+const { resolve } = require('dns')
 
 console.log(process.env.NODE_ENV)
 
@@ -14,6 +16,11 @@ module.exports = {
             : 'source-map',
     module: {
         rules: [
+            {
+                test: /\.ts$/,
+                use: 'ts-loader',
+                exclude: '/node_modules/',
+            },
             {
                 test: /\.css$/,
                 use: ['style-loader', ' css-loader'],
@@ -31,6 +38,9 @@ module.exports = {
                 use: 'babel-loader',
             },
         ],
+    },
+    resolve: {
+        extensions: ['.ts', '.js']
     },
     optimization: {
         minimizer: ['...', new CssMinimizerPlugin()],
